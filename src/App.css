@@ -1,3 +1,106 @@
+@font-face {
+  font-family: 'SFNSDisplay-Black';
+  src: url('./assets/fonts/SFNSDisplay-Black.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; 
+}
+@font-face {
+  font-family: 'SFNSDisplay-Bold';
+  src: url('./assets/fonts/SFNSDisplay-Bold.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; 
+}
+@font-face {
+  font-family: 'SFNSDisplay-Heavy';
+  src: url('./assets/fonts/SFNSDisplay-Heavy.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SFNSDisplay-Light';
+  src: url('./assets/fonts/SFNSDisplay-Light.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SFNSDisplay-Medium';
+  src: url('./assets/fonts/SFNSDisplay-Medium.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SFNSDisplay-Medium';
+  src: url('./assets/fonts/SFNSDisplay-Medium.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SFNSDisplay-Regular';
+  src: url('./assets/fonts/SFNSDisplay-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SFNSDisplay-Semibold';
+  src: url('./assets/fonts/SFNSDisplay-Semibold.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SFNSDisplay-Thin';
+  src: url('./assets/fonts/SFNSDisplay-Thin.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SFNSDisplay-Ultralight';
+  src: url('./assets/fonts/SFNSDisplay-Ultralight.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  scrollbar-width: none;
+  /* Safari and Chrome */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+:root {
+  --m-bg: #dcdcdc;
+}
+html, body {
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}
+html {
+  height: -webkit-fill-available;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100dvh;
+  width: 100%;
+  padding-bottom: env(safe-area-inset-bottom);
+  box-sizing: border-box;
+  background: var(--m-bg);
+  font-family: 'SFNSDisplay-Regular';
+  color: #404040;
+  /* overflow: hidden; */
+}
+button {
+  cursor: pointer;
+}
 .counter {
   font-size: 16px;
   padding: 5px 10px;
