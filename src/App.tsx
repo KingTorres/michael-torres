@@ -22,25 +22,25 @@ function App() {
         </section>
         <section>
           <div className='relative flex md:text-xl'>
-            <div className='w-[8.6em] flex'>
+            <div className='w-[8.6em] flex font-[SFNSDisplay-Bold]'>
               <div className='
-              bg-gradient-to-r from-[#6b1212] to-[#a33939] bg-clip-text text-transparent
-              z-[-1] top-[0.5em] left-[2.25em] text-[1.87em] absolute text-right font-[SFNSDisplay-Black] whitespace-nowrap flex-col flex'>
+              bg-gradient-to-r from-[#454545] to-[#9f9f9f] bg-clip-text text-transparent
+              z-[-1] top-[0.5em] left-[2.25em] text-[1.87em] absolute text-right whitespace-nowrap flex-col flex'>
                 <div>BUILD THE</div>
                 <div className='mt-[-0.4em]'>FUTURE</div>
               </div>
               <div className='
-              bg-gradient-to-r from-[#1b2d05] to-[#58a734] bg-clip-text text-transparent
-              top-[4.2em] left-[1.1em] absolute text-[1.87em] font-[SFNSDisplay-Black] whitespace-nowrap text-right flex-col flex'>
+              bg-gradient-to-r from-[#454545] to-[#9f9f9f] bg-clip-text text-transparent
+              top-[4.2em] left-[1.1em] absolute text-[1.87em] whitespace-nowrap text-right flex-col flex'>
                 <div className='mr-8'>DESIGN &</div>
                 <div className='mt-[-0.4em]'>CODE</div>
               </div>
               <div className='
-              bg-gradient-to-r from-[#411763] to-[#5335b9] bg-clip-text text-transparent
-              z-[-1] top-[8.1em] left-[0.85em] absolute text-[1.87em] font-[SFNSDisplay-Black] whitespace-nowrap text-right flex'>IN FOCUS</div>
+              bg-gradient-to-r from-[#454545] to-[#9f9f9f] bg-clip-text text-transparent
+              z-[-1] top-[8.1em] left-[0.85em] absolute text-[1.87em] whitespace-nowrap text-right flex'>IN FOCUS</div>
               <div className='
-              bg-gradient-to-r from-[#b95610] to-[#919709] bg-clip-text text-transparent
-              top-[10.5em] left-[1.2em] absolute text-[1.87em] font-[SFNSDisplay-Black] whitespace-nowrap text-left flex-col flex'>
+              bg-gradient-to-r from-[#454545] to-[#9f9f9f] bg-clip-text text-transparent
+              top-[10.5em] left-[1.2em] absolute text-[1.87em] whitespace-nowrap text-left flex-col flex'>
                 <div>IN PROGRESS</div>
               </div>
             </div>
