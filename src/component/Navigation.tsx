@@ -2,7 +2,7 @@ import VTracerIcon from './logo'
 
 const Navigation = () => {
   return (
-    <div className='sticky top-0 bg-[var(--m-bg)] relative px-2 py-2 items-center justify-between flex'>
+    <div className='z-2 sticky top-0 bg-[var(--m-bg)] relative px-2 py-2 items-center justify-between flex'>
         <div>
         <VTracerIcon size={30}></VTracerIcon>
         </div>
