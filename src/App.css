@@ -34,13 +34,6 @@
   font-display: swap;
 }
 @font-face {
-  font-family: 'SFNSDisplay-Medium';
-  src: url('./assets/fonts/SFNSDisplay-Medium.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
   font-family: 'SFNSDisplay-Regular';
   src: url('./assets/fonts/SFNSDisplay-Regular.otf') format('opentype');
   font-weight: 400;
@@ -68,7 +61,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 * {
   scrollbar-width: none;
   /* Safari and Chrome */
@@ -78,6 +70,7 @@
 }
 :root {
   --m-bg: #dcdcdc;
+  --m-color: #404040;
 }
 html, body {
   overscroll-behavior: none;
@@ -95,7 +88,7 @@ body {
   box-sizing: border-box;
   background: var(--m-bg);
   font-family: 'SFNSDisplay-Regular';
-  color: #404040;
+  color: var(--m-color);
   /* overflow: hidden; */
 }
 button {

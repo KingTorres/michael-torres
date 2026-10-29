@@ -1,26 +1,48 @@
-import { useState } from 'react'
 import './App.css'
-import VTracerIcon from './component/logo'
+import Navigation from './component/Navigation'
+import Formal from './assets/img/profile.webp'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div className='w-dvw flex flex-col h-dvh'>
-        <div className='bg-[var(--m-bg)] relative px-2 py-2 items-center justify-between flex border border-1 border-red-500'>
-          <div>
-            <VTracerIcon size={30}></VTracerIcon>
+      <div className='relative w-dvw flex flex-col h-dvh'>
+        <Navigation></Navigation>
+        <section className='py-5 px-5 justify-center flex-col flex'>
+          <div className='flex-col text-left items-start flex justify-start'>
+            <div className='text-4xl font-[SFNSDisplay-BLACK]'>MICHAEL TORRES</div>
+            <div>
+              <div className='
+              bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent
+              font-[SFNSDisplay-Semibold] text-lg'>Front-end Developer</div>
+              <div className='w-10 border'></div>
+            </div>
+            <div className='mt-2 text-xs font-[SFNSDisplay-Light]'>Building responsive, user-friendly and optimize website.</div>
           </div>
-          <div className='bg-[var(--m-bg)] shadow-lg gap-8 text-left flex-col flex text-xl px-10 py-10 rounded-lg top-[100%] right-0 absolute border-1' style={{fontFamily: 'SFNSDisplay-Semibold'}}>
-            <div className='py-1.5 border-b-1 w-full pl-5 pr-10'>HOME</div>
-            <div className='py-1.5 border-b-1 w-full pl-5 pr-10'>WORK</div>
-            <div className='py-1.5 border-b-1 w-full pl-5 pr-10'>CONTACT</div>
+        </section>
+        <section className='relative flex'>
+          <div className='w-34.5 flex'>
+            <div className='
+            bg-gradient-to-r from-[#6b1212] to-[#a33939] bg-clip-text text-transparent
+            z-[-1] top-5 left-17 absolute text-right text-3xl font-[SFNSDisplay-Black] whitespace-nowrap'>BUILD THE<br/>FUTURE</div>
+            <div className='
+            bg-gradient-to-r from-[#1b2d05] to-[#58a734] bg-clip-text text-transparent
+            top-32 left-8 absolute text-3xl font-[SFNSDisplay-Black] whitespace-nowrap text-right flex-col flex'>
+              <div className='mr-8'>DESIGN &</div>
+              <div>CODE</div>
+            </div>
+            <div className='
+            bg-gradient-to-r from-[#411763] to-[#5335b9] bg-clip-text text-transparent
+            z-[-1] top-60 left-7 absolute text-3xl font-[SFNSDisplay-Black] whitespace-nowrap text-right flex'>IN FOCUS</div>
+            <div className='
+            bg-gradient-to-r from-[#b95610] to-[#919709] bg-clip-text text-transparent
+            top-78 left-9 absolute text-3xl font-[SFNSDisplay-Black] whitespace-nowrap text-left flex-col flex'>
+              <div>IN PROGRESS</div>
+            </div>
           </div>
-        </div>
-        
-        <section style={{fontFamily: 'SFNSDisplay-Regular'}}>
-          <div>Michael Torres</div>
+          <div className='w-64.5'>
+            <img className='w-full h-auto' src={Formal} alt="About me" />
+          </div>
         </section>
 
       </div>
