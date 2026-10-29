@@ -20,8 +20,8 @@ function App() {
             <div className='text-xs md:text-lg font-[SFNSDisplay-Light]'>Building responsive, user-friendly and optimize website.</div>
           </div>
         </section>
-        <section className='items-center md:grid md:grid-cols-2 gap-2 md:gap-0'>
-          <div className='md:order-2 relative flex md:ml-[-3.4em]'>
+        <section className='items-center md:grid md:grid-cols-[58%_42%] gap-2 md:gap-0'>
+          <div className='md:order-2 relative flex'>
             <div className='md:w-[17em] w-[100vw] flex justify-center'>
               <img className='md:w-full w-[50vw] h-auto' src={Formal} alt="About me" />
               <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-[var(--m-bg)] to-transparent z-1" />
@@ -70,7 +70,7 @@ function App() {
             </div>
           </div>        
         </section>
-        <section className='text-left flex-col flex p-5 text-[var(--m-bg)] bg-[var(--m-color)] md:rounded-xl'>
+        <section className='text-left flex-col flex p-5 text-[var(--m-bg)] bg-[var(--m-color)]'>
           <div className='mb-5 text-xl md:text-3xl font-[SFNSDisplay-Heavy]'>PROJECTS</div>
           <div className='flex flex-col gap-2 md:grid md:grid-cols-2 gap-2 md:px-8'>
             <div className='p-5 flex flex-col gap-2'>
