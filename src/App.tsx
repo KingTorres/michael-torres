@@ -64,7 +64,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section className='py-5 relative h-[140vw] md:h-[40em]'>
+        <section className='py-5 relative md:pb-1'>
           <div className='text-[var(--m-bg)] mb-5 text-xl md:text-3xl font-[SFNSDisplay-Heavy]'>SKILLS</div>
           <Talent></Talent>
           <div className='h-full w-full absolute top-0 z-[-1]'>

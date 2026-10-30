@@ -3,12 +3,13 @@ export function MultiSeriesRadar() {
   return (
         <RadarChart
         series={[{ 
-            data: [95, 90, 98, 87, 83],
+            data: [95, 95, 98, 87, 83],
             color: '#71c6ff',
+            valueFormatter: (value) => `${value}%`,
         }]}
         radar={{
             max: 100,
-            metrics: ['Responsiveness', 'UI', 'Layout', 'UX', 'Graphics']
+            metrics: ['Responsiveness', 'UX', 'Layout', 'Graphics', 'UI']
         }}
         sx={{
         '& text, & .MuiChartsRadar-metricLabel': {
@@ -28,11 +29,10 @@ export function MultiSeriesRadar() {
 }
 const Talent = () => {
   return (
-    <div className='flex flex-col md:grid md:grid-cols-[max-content_1fr] gap-2'>
-        <div className='w-[80vw] h-[60vw] m-auto md:w-[40em] md:h-[30em] border border-red-500'>
+    <div className='flex flex-col'>
+        <div className='w-[100vw] h-[90vw] m-auto md:w-[40em] md:h-[30em]'>
             {MultiSeriesRadar()}
         </div>
-        <div>asdasdsd</div>
     </div>
   )
 }
