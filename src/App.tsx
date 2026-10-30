@@ -1,6 +1,7 @@
 import './App.css'
+import ProfileStand from './component/ProfileStand'
 import Navigation from './component/Navigation'
-import Formal from './assets/img/profile.webp'
+import Qoute from './assets/img/qoute.webp'
 import Megabet from './assets/img/projects/mb.webp'
 
 function App() {
@@ -22,51 +23,17 @@ function App() {
         </section>
         <section className='items-center md:grid md:grid-cols-[58%_42%] gap-2 md:gap-0'>
           <div className='md:order-2 relative flex'>
-            <div className='md:w-[17em] w-[100vw] flex justify-center'>
-              <img className='md:w-full w-[50vw] h-auto' src={Formal} alt="About me" />
-              <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-[var(--m-bg)] to-transparent z-1" />
-            </div>
-            <div className='absolute md:relative md:w-[8.6em] w-[100vw] md:text-xl flex font-[SFNSDisplay-Heavy]'>
-              <div className='
-              z-[-1] whitespace-nowrap flex-col absolute flex
-              bg-gradient-to-r from-[#454545] to-[#9f9f9f] bg-clip-text text-transparent
-              top-[1vw] right-[13.5vw] text-[6.5vw] text-left 
-              md:from-[#9f9f9f] md:to-[#454545]
-              md:top-[0.1em] md:left-[-2.9em] md:right-[unset] md:text-[2em]'>
-                <div>BUILD THE</div>
-                <div className='mt-[-0.4em]'>FUTURE</div>
-              </div>
-              <div className='
-              whitespace-nowrap text-right flex-col flex
-              bg-gradient-to-r from-[#454545] to-[#9f9f9f] bg-clip-text text-transparent
-              top-[28vw] md:text-left left-[2.1vw] absolute text-[6.5vw]
-              md:from-[#9f9f9f] md:to-[#454545]
-              md:top-[3em] md:left-[-2em] md:text-[2em]'>
-                <div className='mr-8'>DESIGN &</div>
-                <div className='mt-[-0.4em]'>CODE</div>
-              </div>
-              <div className='
-              z-[-1] whitespace-nowrap absolute flex
-              bg-gradient-to-r from-[#454545] to-[#9f9f9f] bg-clip-text text-transparent
-              top-[49vw] right-[4.7vw] text-[6.5vw]
-              md:from-[#9f9f9f] md:to-[#454545]
-              md:top-[6.8em] md:left-[-1.3em] md:right-[unset] md:text-[2em]'>IN FOCUS</div>
-              <div className='
-              whitespace-nowrap absolute flex
-              bg-gradient-to-r from-[#454545] to-[#9f9f9f] bg-clip-text text-transparent
-              top-[60vw] left-[8vw] text-[6.5vw] 
-              md:from-[#9f9f9f] md:to-[#454545]
-              md:top-[8.8em] md:left-[-2.3em] md:text-[2em]'>
-                <div>IN PROGRESS</div>
-              </div>
-            </div>
+            <ProfileStand></ProfileStand>
           </div>
-          <div className='md:order-1 gap-2 flex flex-col text-left p-5'>
+          <div className='relative md:order-1 gap-2 items-center justify-center flex flex-col text-left p-5'>
             <div className='text-xl md:text-3xl font-[SFNSDisplay-Heavy]'>ABOUT ME</div>
             <div className='text-xl md:text-2xl'>
-              <span className='font-[SFNSDisplay-Semibold]'>Michael Torres</span> is a Front-end and Web Designer passionate about crafting beautiful and functional web application designs.
+              I'm <span className='font-[SFNSDisplay-Semibold]'>Michael Torres</span>, a Web Designer and Front-end Developer passionate about <span className='font-[SFNSDisplay-Semibold]'>crafting beautiful and functional web application designs</span>.
               <br/><br/>
-              Bringing together expertise in Web Design and Graphic-Arts development, he creates seamless user experiences, analyzes complex problems, and optimizes systems through a deep understanding of both fields.
+              Bringing together expertise in Web Design and Graphic-Arts development, I create seamless user experiences, analyze complex problems, and optimize systems through a deep understanding of both fields.
+            </div>
+            <div className='h-[50%] w-[50%] absolute opacity-[9%] z-[-1]'>
+              <img className='h-full w-full object-contain' src={Qoute} alt="qoute" />
             </div>
           </div>        
         </section>
