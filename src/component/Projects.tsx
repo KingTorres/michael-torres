@@ -1,8 +1,8 @@
 import Megabet from '../assets/img/projects/mb.webp'
 const Projects = () => {
   return (
-    <div className='flex flex-col mt-2 md:grid md:grid-cols-2 md:gap-2 md:px-8'>
-        <div className='p-5 flex flex-col gap-2'>
+    <div className='flex flex-col gap-4 mt-2 md:grid md:grid-cols-2 md:gap-3 md:px-8'>
+        <div className='px-5 flex flex-col gap-2'>
             <div className='px-[20%]'>
             <img src={Megabet} alt="laptop" />
             </div>
@@ -11,7 +11,7 @@ const Projects = () => {
             MegaBet is a gaming platform registered trademark, brand, and business name owned by MegaBet Corp. Regulated and licensed by the Philippine Amusement and Gaming Corporation (PAGCOR).
             </div>
         </div>
-        <div className='p-5 flex flex-col gap-2'>
+        <div className='px-5 flex flex-col gap-2'>
             <div className='px-[20%]'>
             <img src={Megabet} alt="laptop" />
             </div>

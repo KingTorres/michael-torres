@@ -47,36 +47,6 @@ const Talent = () => {
         </div>
         <div className='grid grid-cols-[1fr_max-content_1fr] items-center md:pb-5'>
           <div className='flex flex-col gap-3 items-center'>
-            <div>Web Development</div>
-            <div className='grid grid-cols-2 gap-3 w-fit'>
-              <div className='p-2 h-18 w-18 flex flex-col items-center'>
-                <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-80' src={ReactLogo} alt="React logo" /></div>
-                <div className='text-xs'>ReactJS</div>
-              </div>
-              <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
-                <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-150' src={ReduxLogo} alt="Redux logo" /></div>
-                <div className='text-xs'>Redux</div>
-              </div>
-              <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
-                <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-125' src={TypescriptLogo} alt="Typescript logo" /></div>
-                <div className='text-xs'>Typescript</div>
-              </div>
-              <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
-                <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-125' src={GitLogo} alt="Git logo" /></div>
-                <div className='text-xs'>Git</div>
-              </div>
-              <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
-                <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-110' src={TailwindLogo} alt="Tailwind logo" /></div>
-                <div className='text-xs'>Tailwind</div>
-              </div>
-              <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
-                <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-100' src={VueLogo} alt="VueJs logo" /></div>
-                <div className='text-xs'>VueJs</div>
-              </div>
-            </div>
-          </div>
-          <div className='border-l-1 opacity-20 h-55'></div>
-          <div className='flex flex-col gap-3 items-center'>
             <div>Graphic Design</div>
             <div className='grid grid-cols-2 gap-3 w-fit'>
               <div className='p-2 h-18 w-18 flex flex-col items-center'>
@@ -102,6 +72,36 @@ const Talent = () => {
               <div className='p-2 h-18 w-18 flex flex-col items-center'>
                 <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-115' src={IndesignLogo} alt="InDesign logo" /></div>
                 <div className='text-xs'>InDesign</div>
+              </div>
+            </div>
+          </div>
+          <div className='border-l-1 opacity-20 h-55'></div>
+          <div className='flex flex-col gap-3 items-center'>
+            <div>Web Development</div>
+            <div className='grid grid-cols-2 gap-3 w-fit'>
+              <div className='p-2 h-18 w-18 flex flex-col items-center'>
+                <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-80' src={ReactLogo} alt="React logo" /></div>
+                <div className='text-xs'>ReactJS</div>
+              </div>
+              <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
+                <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-150' src={ReduxLogo} alt="Redux logo" /></div>
+                <div className='text-xs'>Redux</div>
+              </div>
+              <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
+                <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-125' src={TypescriptLogo} alt="Typescript logo" /></div>
+                <div className='text-xs'>Typescript</div>
+              </div>
+              <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
+                <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-125' src={GitLogo} alt="Git logo" /></div>
+                <div className='text-xs'>Git</div>
+              </div>
+              <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
+                <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-110' src={TailwindLogo} alt="Tailwind logo" /></div>
+                <div className='text-xs'>Tailwind</div>
+              </div>
+              <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
+                <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-100' src={VueLogo} alt="VueJs logo" /></div>
+                <div className='text-xs'>VueJs</div>
               </div>
             </div>
           </div>
