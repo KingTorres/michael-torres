@@ -49,27 +49,27 @@ const Talent = () => {
           <div className='flex flex-col gap-3 items-center'>
             <div>Graphic Design</div>
             <div className='grid grid-cols-2 gap-3 w-fit'>
-              <div className='p-2 h-18 w-18 flex flex-col items-center'>
+              <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
                 <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-100' src={PhotoshopLogo} alt="Photoshop logo" /></div>
                 <div className='text-xs'>Photoshop</div>
               </div>
-              <div className='p-2 h-18 w-18 flex flex-col items-center'>
+              <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
                 <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-100' src={FigmaLogo} alt="Figma logo" /></div>
                 <div className='text-xs'>Figma</div>
               </div>
-              <div className='p-2 h-18 w-18 flex flex-col items-center'>
+              <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
                 <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-125' src={FreepikLogo} alt="Freepik logo" /></div>
                 <div className='text-xs'>Freepik</div>
               </div>
-              <div className='p-2 h-18 w-18 flex flex-col items-center'>
+              <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
                 <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-70' src={DafontLogo} alt="Dafont logo" /></div>
                 <div className='text-xs'>Dafont</div>
               </div>
-              <div className='p-2 h-18 w-18 flex flex-col items-center'>
+              <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
                 <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-85' src={IllustratorLogo} alt="Illustrator logo" /></div>
                 <div className='text-xs'>Illustrator</div>
               </div>
-              <div className='p-2 h-18 w-18 flex flex-col items-center'>
+              <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
                 <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-115' src={IndesignLogo} alt="InDesign logo" /></div>
                 <div className='text-xs'>InDesign</div>
               </div>
@@ -79,7 +79,7 @@ const Talent = () => {
           <div className='flex flex-col gap-3 items-center'>
             <div>Web Development</div>
             <div className='grid grid-cols-2 gap-3 w-fit'>
-              <div className='p-2 h-18 w-18 flex flex-col items-center'>
+              <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
                 <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-80' src={ReactLogo} alt="React logo" /></div>
                 <div className='text-xs'>ReactJS</div>
               </div>
