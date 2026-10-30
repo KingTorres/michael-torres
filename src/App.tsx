@@ -48,20 +48,20 @@ function App() {
           <div className='text-left'>
             My professional journey bridges technical execution with creative vision. With experience leading front-end development, graphic design, and publishing workflows, I combine a strong design sense with a data-driven approach to build intuitive, high-performance web experiences.
           </div>
-          <div className='grid grid-cols-2 gap-2 md:flex md:justify-between'>
-            <div className='shadow-lg md:shadow-none py-7 px-2 flex flex-col gap-1'>
+          <div className='grid grid-cols-2 gap-2 md:flex md:justify-center md:mt-3'>
+            <div className='shadow-lg w-full py-7 px-2 flex flex-col gap-1'>
               <div className='font-[SFNSDisplay-Heavy] text-4xl md:text-6xl'>3</div>
               <div className='text-[0.7em] md:text-[0.8em]'>Years of <br className='md:hidden'/>Web Development</div>
             </div>
-            <div className='shadow-lg md:shadow-none py-7 px-2 flex flex-col gap-1'>
+            <div className='shadow-lg w-full py-7 px-2 flex flex-col gap-1'>
               <div className='font-[SFNSDisplay-Heavy] text-4xl md:text-6xl'>2</div>
               <div className='text-[0.7em] md:text-[0.8em]'>Years of <br className='md:hidden'/>Graphic Design</div>
             </div>
-            <div className='shadow-lg md:shadow-none py-7 px-2 flex flex-col gap-1'>
+            <div className='shadow-lg w-full py-7 px-2 flex flex-col gap-1'>
               <div className='font-[SFNSDisplay-Heavy] text-4xl md:text-6xl'>4</div>
               <div className='text-[0.7em] md:text-[0.8em]'>Years in <br className='md:hidden'/>Publishing Industry</div>
             </div>
-            <div className='shadow-lg md:shadow-none py-7 px-2 flex flex-col gap-1'>
+            <div className='shadow-lg w-full py-7 px-2 flex flex-col gap-1'>
               <div className='font-[SFNSDisplay-Heavy] text-4xl md:text-6xl'>2</div>
               <div className='text-[0.7em] md:text-[0.8em]'>Years of <br className='md:hidden'/>Data Analysis</div>
             </div>
@@ -74,6 +74,14 @@ function App() {
           <div className='h-full w-full absolute top-0 z-[-1]'>
             <div className='z-1 absolute top-0 h-[calc(100%+0.15em)] w-full bg-[#141414bd]'></div>
             <img className='h-full w-full object-cover blur-[0.1em]' src={CoverPhoto} alt="Cover Photo" />
+          </div>
+        </section>
+        <section className='p-5'>
+          <div className='text-xl md:text-3xl font-[SFNSDisplay-Heavy] w-full text-center mb-2'>EXPERTISE</div>
+          <div className='text-left flex flex-col gap-2 md:grid md:grid-cols-3 md:gap-3'>
+            <div><span className='font-[SFNSDisplay-Bold]'>Design Vision</span>: Translating sophisticated design concepts into exceptionally clean, responsive, and high-performance code that bridges the gap between aesthetics and seamless functionality across all modern devices.</div>
+            <div><span className='font-[SFNSDisplay-Bold]'>Code Execution</span>: Delivering robust, highly modular, pixel-perfect, and mobile-first code architectures designed for long-term scalability, easy maintenance, and optimal cross-browser compatibility.</div>
+            <div><span className='font-[SFNSDisplay-Bold]'>Data Insights</span>: Leveraging analytical thinking and quantitative data to rigorously validate design choices, track user behavior patterns, and continuously improve overall user engagement and retention.</div>
           </div>
         </section>
       </div>

@@ -1,4 +1,16 @@
 import { RadarChart } from '@mui/x-charts/RadarChart';
+import ReactLogo from '../assets/img/tools/react.webp'
+import ReduxLogo from '../assets/img/tools/redux.webp'
+import TypescriptLogo from '../assets/img/tools/typescript.webp'
+import TailwindLogo from '../assets/img/tools/tailwind.webp'
+import GitLogo from '../assets/img/tools/git.webp'
+import VueLogo from '../assets/img/tools/vue.webp'
+import IllustratorLogo from '../assets/img/tools/illustrator.webp'
+import PhotoshopLogo from '../assets/img/tools/photoshop.webp'
+import FigmaLogo from '../assets/img/tools/figma.webp'
+import IndesignLogo from '../assets/img/tools/indesign.webp'
+import FreepikLogo from '../assets/img/tools/freepik.webp'
+import DafontLogo from '../assets/img/tools/dafont.webp'
 export function MultiSeriesRadar() {
   return (
         <RadarChart
@@ -29,23 +41,72 @@ export function MultiSeriesRadar() {
 }
 const Talent = () => {
   return (
-    <div className='flex flex-col md:grid md:grid-cols-[max-content_1fr] md:gap-0'>
+    <div className='flex flex-col md:grid md:grid-cols-[max-content_1fr] md:gap-0 md:px-12'>
         <div className='w-[100vw] h-[90vw] m-auto md:w-[35em] md:h-[25em]'>
             {MultiSeriesRadar()}
         </div>
-        <div>
-            <ul className='list-disc text-left mx-[8%] md:mx-0 md:text-lg md:mr-20 text-[#a5a5a5]'>
-                <li className='mb-2'>Design Vision: Translating sophisticated design concepts into exceptionally clean, responsive, and high-performance code that bridges the gap between aesthetics and seamless functionality across all modern devices.</li>
-                <li className='mb-2'>Code Execution: Delivering robust, highly modular, pixel-perfect, and mobile-first code architectures designed for long-term scalability, easy maintenance, and optimal cross-browser compatibility.</li>
-                <li className='mb-2'>Data Insights: Leveraging analytical thinking and quantitative data to rigorously validate design choices, track user behavior patterns, and continuously improve overall user engagement and retention.</li>
-            </ul>
+        <div className='grid grid-cols-[1fr_max-content_1fr] items-center md:pb-5'>
+          <div className='flex flex-col gap-3 items-center'>
+            <div>Web Development</div>
+            <div className='grid grid-cols-2 gap-3 w-fit'>
+              <div className='p-2 h-18 w-18 flex flex-col items-center'>
+                <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-80' src={ReactLogo} alt="React logo" /></div>
+                <div className='text-xs'>ReactJS</div>
+              </div>
+              <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
+                <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-150' src={ReduxLogo} alt="Redux logo" /></div>
+                <div className='text-xs'>Redux</div>
+              </div>
+              <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
+                <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-125' src={TypescriptLogo} alt="Typescript logo" /></div>
+                <div className='text-xs'>Typescript</div>
+              </div>
+              <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
+                <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-125' src={GitLogo} alt="Git logo" /></div>
+                <div className='text-xs'>Git</div>
+              </div>
+              <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
+                <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-110' src={TailwindLogo} alt="Tailwind logo" /></div>
+                <div className='text-xs'>Tailwind</div>
+              </div>
+              <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
+                <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-100' src={VueLogo} alt="VueJs logo" /></div>
+                <div className='text-xs'>VueJs</div>
+              </div>
+            </div>
+          </div>
+          <div className='border-l-1 opacity-20 h-55'></div>
+          <div className='flex flex-col gap-3 items-center'>
+            <div>Graphic Design</div>
+            <div className='grid grid-cols-2 gap-3 w-fit'>
+              <div className='p-2 h-18 w-18 flex flex-col items-center'>
+                <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-100' src={PhotoshopLogo} alt="Photoshop logo" /></div>
+                <div className='text-xs'>Photoshop</div>
+              </div>
+              <div className='p-2 h-18 w-18 flex flex-col items-center'>
+                <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-100' src={FigmaLogo} alt="Figma logo" /></div>
+                <div className='text-xs'>Figma</div>
+              </div>
+              <div className='p-2 h-18 w-18 flex flex-col items-center'>
+                <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-125' src={FreepikLogo} alt="Freepik logo" /></div>
+                <div className='text-xs'>Freepik</div>
+              </div>
+              <div className='p-2 h-18 w-18 flex flex-col items-center'>
+                <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-70' src={DafontLogo} alt="Dafont logo" /></div>
+                <div className='text-xs'>Dafont</div>
+              </div>
+              <div className='p-2 h-18 w-18 flex flex-col items-center'>
+                <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-85' src={IllustratorLogo} alt="Illustrator logo" /></div>
+                <div className='text-xs'>Illustrator</div>
+              </div>
+              <div className='p-2 h-18 w-18 flex flex-col items-center'>
+                <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-115' src={IndesignLogo} alt="InDesign logo" /></div>
+                <div className='text-xs'>InDesign</div>
+              </div>
+            </div>
+          </div>
         </div>
     </div>
-    
-
-
-
-
   )
 }
 
