@@ -45,6 +45,9 @@ function App() {
         </section>
         <section className='p-5 pb-8'>
           <div className='text-xl md:text-3xl font-[SFNSDisplay-Heavy] w-full text-center mb-2'>EXPERIENCE</div>
+          <div className='text-left'>
+            My professional journey bridges technical execution with creative vision. With experience leading front-end development, graphic design, and publishing workflows, I combine a strong design sense with a data-driven approach to build intuitive, high-performance web experiences.
+          </div>
           <div className='grid grid-cols-2 gap-2 md:flex md:justify-between'>
             <div className='shadow-lg md:shadow-none py-7 px-2 flex flex-col gap-1'>
               <div className='font-[SFNSDisplay-Heavy] text-4xl md:text-6xl'>3</div>
@@ -64,11 +67,12 @@ function App() {
             </div>
           </div>
         </section>
-        <section className='py-5 relative md:pb-1'>
-          <div className='text-[var(--m-bg)] mb-5 text-xl md:text-3xl font-[SFNSDisplay-Heavy]'>SKILLS</div>
+        <section className='text-[var(--m-bg)] py-5 md:pb-1 relative md:pb-1'>
+          <div className='text-xl md:text-3xl font-[SFNSDisplay-Heavy]'>SKILLS</div>
+          <div className='mb-2 mx-[8%] md:mx-20 py-2 mb-5 border-b-1'>Core technical and UI/UX design skills.</div>
           <Talent></Talent>
           <div className='h-full w-full absolute top-0 z-[-1]'>
-            <div className='z-1 absolute top-0 h-[calc(100%+0.15em)] w-full bg-[#1414149e]'></div>
+            <div className='z-1 absolute top-0 h-[calc(100%+0.15em)] w-full bg-[#141414bd]'></div>
             <img className='h-full w-full object-cover blur-[0.1em]' src={CoverPhoto} alt="Cover Photo" />
           </div>
         </section>
