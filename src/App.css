@@ -278,3 +278,41 @@ button {
     border-right-color: var(--border);
   }
 }
+.fadeIn {
+  opacity: 1;
+  animation: arrowInitial 0.5s linear;
+}
+@keyframes arrowInitial {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.upward {
+  animation: upwward 0.3s linear forwards;
+}
+
+.downward {
+  animation: downward 0.3s linear forwards;
+}
+@keyframes upwward {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes downward {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
