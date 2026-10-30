@@ -1,8 +1,10 @@
 import './App.css'
-import ProfileStand from './component/ProfileStand'
 import Navigation from './component/Navigation'
+import ProfileStand from './component/ProfileStand'
+import Projects from './component/Projects'
+import Talent from './component/Talent'
 import Qoute from './assets/img/qoute.webp'
-import Megabet from './assets/img/projects/mb.webp'
+import CoverPhoto from './assets/img/coverPhoto.webp'
 
 function App() {
 
@@ -39,28 +41,9 @@ function App() {
         </section>
         <section className='text-center flex-col flex py-6 px-5 text-[var(--m-bg)] bg-[var(--m-color)]'>
           <div className='mb-5 text-xl md:text-3xl font-[SFNSDisplay-Heavy]'>PROJECTS</div>
-          <div className='flex flex-col gap-2 md:grid md:grid-cols-2 gap-2 md:px-8'>
-            <div className='p-5 flex flex-col gap-2'>
-              <div className='px-[20%]'>
-                <img src={Megabet} alt="laptop" />
-              </div>
-              <div className='text-center text-xl font-[SFNSDisplay-Bold]'>Megabet</div>
-              <div className='text-left text-base h-32 md:h-24'>
-                MegaBet is a gaming platform registered trademark, brand, and business name owned by MegaBet Corp. Regulated and licensed by the Philippine Amusement and Gaming Corporation (PAGCOR).
-              </div>
-            </div>
-            <div className='p-5 flex flex-col gap-2'>
-              <div className='px-[20%]'>
-                <img src={Megabet} alt="laptop" />
-              </div>
-              <div className='text-center text-xl font-[SFNSDisplay-Bold]'>K-Store</div>
-              <div className='text-left text-base h-32 md:h-24'>
-                K-Store is an e-commerce online shopping platform designed to provide a seamless, retail experience. Built with a focus on intuitive navigation, and responsive design across all devices.
-              </div>
-            </div>
-          </div>
+          <Projects></Projects>
         </section>
-        <section className='p-5'>
+        <section className='p-5 pb-8'>
           <div className='text-xl md:text-3xl font-[SFNSDisplay-Heavy] w-full text-center mb-2'>EXPERIENCE</div>
           <div className='grid grid-cols-2 gap-2 md:flex md:justify-between'>
             <div className='shadow-lg md:shadow-none py-7 px-2 flex flex-col gap-1'>
@@ -79,6 +62,14 @@ function App() {
               <div className='font-[SFNSDisplay-Heavy] text-4xl md:text-6xl'>2</div>
               <div className='text-[0.7em] md:text-[0.8em]'>Years of <br className='md:hidden'/>Data Analysis</div>
             </div>
+          </div>
+        </section>
+        <section className='py-5 relative h-[140vw] md:h-[40em]'>
+          <div className='text-[var(--m-bg)] mb-5 text-xl md:text-3xl font-[SFNSDisplay-Heavy]'>SKILLS</div>
+          <Talent></Talent>
+          <div className='h-full w-full absolute top-0 z-[-1]'>
+            <div className='z-1 absolute top-0 h-[calc(100%+0.15em)] w-full bg-[#1414149e]'></div>
+            <img className='h-full w-full object-cover blur-[0.1em]' src={CoverPhoto} alt="Cover Photo" />
           </div>
         </section>
       </div>
