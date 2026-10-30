@@ -37,8 +37,7 @@ const ProfileStand = () => {
             md:top-[8.8em] md:left-[-2.3em] md:text-[2em]'>
             <div>IN PROGRESS</div>
             </div>
-        </div>
-      
+        </div>      
     </>
   )
 }
