@@ -49,6 +49,7 @@ const Navigation = () => {
           <div className='py-1 w-full pl-5 pr-10 md:p-0' onClick={() => scrollToSection('SectionAbout')}>ABOUT</div>
           <div className='py-1 w-full pl-5 pr-10 md:p-0' onClick={() => scrollToSection('SectionProjects')}>PROJECTS</div>
           <div className='py-1 w-full pl-5 pr-10 md:p-0' onClick={() => scrollToSection('SectionSkills')}>SKILLS</div>
+          <div className='py-1 w-full pl-5 pr-10 md:p-0' onClick={() => scrollToSection('SectionContact')}>CONTACT</div>
           {/* <div className='py-1.5 border-b-1 w-full pl-5 pr-10'>CONTACT</div> */}
         </div>
     </div>

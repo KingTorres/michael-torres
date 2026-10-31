@@ -64,7 +64,7 @@ const Contact = () => {
                 break;
             case "linkedin":
                 setLinkedin(true)
-                textToCopy = 'http://linkedin.com/in/torres-michael36'
+                textToCopy = 'linkedin.com/in/torres-michael36'
                 break;
             case "email":
                 setEmail(true)
@@ -87,7 +87,7 @@ const Contact = () => {
     }
   return (
     <>
-    <div className='grid grid-cols-[max-content_1fr] gap-4 md:gap-6 mt-5 md:mt-3 md:px-40'>
+    <div className='grid grid-cols-[max-content_1fr] gap-4 md:gap-6 mt-5 md:mt-3 md:px-30'>
         <div className='
         md:h-35 md:w-35 md:border-10
         h-32 w-32 aspect-square border-8 rounded-[10em] overflow-hidden'>
@@ -101,29 +101,28 @@ const Contact = () => {
             <div className='
             font-[SFNSDisplay-Bold]'>Michael Torres</div>
             <div className='hidden md:inline-block mx-1'>|</div>
-            <button onClick={() => copyText('phone')} disabled={linkedin}>
+            <button className='cursor-pointer' onClick={() => copyText('phone')} disabled={linkedin}>
                 {phone ? 'Copied!' : <u>+639493923708</u>}    
             </button>
         </div>
         <div className='
         md:text-xl
-        grid grid-cols-2 text-sm justify-center gap-2'>
-            <button onClick={() => copyText('linkedin')} className='w-full border px-2 rounded-xl md:rounded-2xl' disabled={linkedin}>
-                {linkedin ? 'Copied' : 'LinkedIn' }
+        grid grid-cols-2 text-sm justify-center gap-3'>
+            <button onClick={() => copyText('viber')} className='cursor-pointer w-full border px-2 rounded-xl md:rounded-2xl' disabled={viber}>
+                {viber ? 'Copied!' : 'Viber' }
             </button>
-            <button onClick={() => copyText('email')} className='w-full border px-2 rounded-xl md:rounded-2xl' disabled={email}>
-                {email ? 'Copied' : 'Email' }
+            <button onClick={() => copyText('telegram')} className='cursor-pointer w-full border px-2 rounded-xl md:rounded-2xl' disabled={telegram}>
+                {telegram ? 'Copied!' : 'Telegram' }
             </button>
-            <button onClick={() => copyText('viber')} className='w-full border px-2 rounded-xl md:rounded-2xl' disabled={viber}>
-                {viber ? 'Copied' : 'Viber' }
+            <button onClick={() => copyText('linkedin')} className='cursor-pointer w-full border px-2 rounded-xl md:rounded-2xl' disabled={linkedin}>
+                {linkedin ? 'Copied!' : <><span className='md:hidden'>LinkedIn</span><span className='hidden md:inline-block'>linkedin.com/in/torres-michael36</span></> }
             </button>
-            <button onClick={() => copyText('telegram')} className='w-full border px-2 rounded-xl md:rounded-2xl' disabled={telegram}>
-                {telegram ? 'Copied' : 'Telegram' }
+            <button onClick={() => copyText('email')} className='cursor-pointer w-full border px-2 rounded-xl md:rounded-2xl' disabled={email}>
+                {email ? 'Copied!' : <><span className='md:hidden'>Email</span><span className='hidden md:inline-block'>torres.michael36@gmail.com</span></> }
             </button>
         </div>
         </div>
-    </div>
-      
+    </div>   
     </>
   )
 }
