@@ -5,7 +5,8 @@ import Projects from './component/Projects'
 import Talent from './component/Talent'
 import Qoute from './assets/img/qoute.webp'
 import CoverPhoto from './assets/img/coverPhoto.webp'
-
+import Certification from './component/Certification'
+import Contact from './component/Contact'
 function App() {
 
   return (
@@ -85,8 +86,17 @@ function App() {
               <div><span className='font-[SFNSDisplay-Bold]'>Data Insights</span>: Leveraging analytical thinking and quantitative data to rigorously validate design choices, track user behavior patterns, and continuously improve overall user engagement and retention.</div>
             </div>
           </section>
-        </div>
-        
+          <section className='p-5 text-[var(--m-bg)] bg-[var(--m-color)]'>
+            <div className='
+            bg-gradient-to-r from-[#9f9f9f]/80 via-[#dddddd] to-[#454545] bg-clip-text text-transparent
+            text-xl md:text-3xl font-[SFNSDisplay-Heavy] w-full text-center mb-2'>CERTIFICATIONS</div>
+            <Certification></Certification>
+          </section>
+          <section className='p-5'>
+            <div className='text-xl md:mt-3 md:text-3xl font-[SFNSDisplay-Heavy] w-full text-center mb-2'>Let's Work Together</div>
+            <Contact></Contact>
+          </section>
+        </div>        
       </div>
     </>
   )
