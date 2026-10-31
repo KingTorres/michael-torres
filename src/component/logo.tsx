@@ -1,11 +1,11 @@
 import React from 'react';
 
-interface VTracerIconProps extends React.SVGProps<SVGSVGElement> {
+interface LogoIconProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
   color?: string;
 }
 
-const VTracerIcon: React.FC<VTracerIconProps> = ({ 
+const Logo: React.FC<LogoIconProps> = ({ 
   size, 
   width = 130, 
   height = 112, 
@@ -34,4 +34,4 @@ const VTracerIcon: React.FC<VTracerIconProps> = ({
   );
 };
 
-export default VTracerIcon;
+export default Logo;

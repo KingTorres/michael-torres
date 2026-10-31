@@ -1,4 +1,4 @@
-import VTracerIcon from './logo'
+import Logo from './logo'
 import ArrowIcon from './arrow';
 import { useState, useEffect, useRef } from 'react';
 
@@ -37,7 +37,7 @@ const Navigation = () => {
   return (
     <div ref={navRef} className='z-2 sticky top-0 bg-[var(--m-bg)] relative px-5 py-2 items-center justify-between flex fadeIn'>
         <div className='cursor-pointer' onClick={() => scrollHome()}>
-          <VTracerIcon size={30}></VTracerIcon>
+          <Logo size={30}></Logo>
         </div>
         <div className='cursor-pointer md:hidden' onClick={() => handleToggle()}>
           <ArrowIcon className={`${arrow ? 'upward' : 'downward'}`} size={30}></ArrowIcon>

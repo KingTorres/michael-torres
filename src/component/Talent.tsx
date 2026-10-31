@@ -48,60 +48,60 @@ const Talent = () => {
         <div className='grid grid-cols-[1fr_max-content_1fr] items-center md:pb-5'>
           <div className='flex flex-col gap-3 items-center'>
             <div>Graphic Design</div>
-            <div className='grid grid-cols-2 gap-3 w-fit'>
+            <div className='grid grid-cols-2 gap-2 w-fit'>
               <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
                 <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-100' src={PhotoshopLogo} alt="Photoshop logo" /></div>
-                <div className='text-xs'>Photoshop</div>
+                <div className='text-[0.7em]'>Photoshop</div>
               </div>
               <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
                 <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-100' src={FigmaLogo} alt="Figma logo" /></div>
-                <div className='text-xs'>Figma</div>
+                <div className='text-[0.7em]'>Figma</div>
               </div>
               <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
                 <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-125' src={FreepikLogo} alt="Freepik logo" /></div>
-                <div className='text-xs'>Freepik</div>
+                <div className='text-[0.7em]'>Freepik</div>
               </div>
               <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
                 <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-70' src={DafontLogo} alt="Dafont logo" /></div>
-                <div className='text-xs'>Dafont</div>
+                <div className='text-[0.7em]'>Dafont</div>
               </div>
               <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
                 <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-85' src={IllustratorLogo} alt="Illustrator logo" /></div>
-                <div className='text-xs'>Illustrator</div>
+                <div className='text-[0.7em]'>Illustrator</div>
               </div>
               <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
                 <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-115' src={IndesignLogo} alt="InDesign logo" /></div>
-                <div className='text-xs'>InDesign</div>
+                <div className='text-[0.7em]'>InDesign</div>
               </div>
             </div>
           </div>
           <div className='border-l-1 opacity-20 h-55'></div>
-          <div className='flex flex-col gap-3 items-center'>
+          <div className='flex flex-col gap-2 items-center'>
             <div>Web Development</div>
             <div className='grid grid-cols-2 gap-3 w-fit'>
               <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
                 <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-80' src={ReactLogo} alt="React logo" /></div>
-                <div className='text-xs'>ReactJS</div>
+                <div className='text-[0.7em]'>ReactJs</div>
               </div>
               <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
                 <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-150' src={ReduxLogo} alt="Redux logo" /></div>
-                <div className='text-xs'>Redux</div>
+                <div className='text-[0.7em]'>Redux</div>
               </div>
               <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
                 <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-125' src={TypescriptLogo} alt="Typescript logo" /></div>
-                <div className='text-xs'>Typescript</div>
+                <div className='text-[0.7em]'>Typescript</div>
               </div>
               <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
                 <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-125' src={GitLogo} alt="Git logo" /></div>
-                <div className='text-xs'>Git</div>
+                <div className='text-[0.7em]'>Git</div>
               </div>
               <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
                 <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-110' src={TailwindLogo} alt="Tailwind logo" /></div>
-                <div className='text-xs'>Tailwind</div>
+                <div className='text-[0.7em]'>Tailwind</div>
               </div>
               <div className='p-2 h-18 w-18 flex flex-col items-center gap-1'>
                 <div className='h-10 w-10'><img className='h-full w-full object-fill grayscale brightness-100' src={VueLogo} alt="VueJs logo" /></div>
-                <div className='text-xs'>VueJs</div>
+                <div className='text-[0.7em]'>VueJs</div>
               </div>
             </div>
           </div>
