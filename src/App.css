@@ -278,11 +278,44 @@ button {
     border-right-color: var(--border);
   }
 }
-.fadeIn {
-  opacity: 1;
-  animation: arrowInitial 0.5s linear;
+.navFade {
+  opacity: 0;
+  animation: fadeIn 0.5s linear forwards;
+  animation-delay: 5s;
 }
-@keyframes arrowInitial {
+.formalStand {
+  opacity: 0;
+  animation: ZoomIn 0.2s linear forwards;
+  animation-delay: 3.5s;
+}
+@keyframes ZoomIn {
+  0% {
+  opacity: 0;
+    transform: scale(0.8)
+  }
+  75% {
+    
+    transform: scale(1.05)
+  }
+  100% {
+  opacity: 1;
+    transform: scale(1)
+  }
+}
+@keyframes fadeSlideRight {
+  0% {
+    transform: translateX(-3em);
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
   0% {
     opacity: 0;
   }

@@ -35,7 +35,7 @@ const Navigation = () => {
     };
   }, [arrow]);
   return (
-    <div ref={navRef} className='z-2 sticky top-0 bg-[var(--m-bg)] relative px-5 py-2 items-center justify-between flex fadeIn'>
+    <div ref={navRef} className='z-2 sticky top-0 bg-[var(--m-bg)] px-5 py-2 items-center justify-between flex navFade'>
         <div className='cursor-pointer' onClick={() => scrollHome()}>
           <Logo size={30}></Logo>
         </div>
