@@ -66,7 +66,8 @@ const Navigation = () => {
     <div  ref={navRef} className={
       `
       ${navDark ? 'navtheme-dark' : 'navtheme-light'}
-      z-2 sticky top-0 bg-[var(--m-bg)] px-5 py-2 items-center justify-between flex navFade`}>
+      md:top-1 md:rounded-xl md:mx-5
+      z-2 sticky top-0 px-5 py-2 items-center justify-between flex navFade`}>
         <div className='cursor-pointer' onClick={() => scrollHome()}>
           <Logo size={30}></Logo>
         </div>
@@ -74,7 +75,8 @@ const Navigation = () => {
           <ArrowIcon className={`${arrow ? 'upward' : 'downward'}`} size={30}></ArrowIcon>
         </div>
         <div className={`
-        bg-[var(--m-bg)] border-1 shadow-xl gap-5 text-left flex-col flex text-xl px-5 py-7 top-[100%] right-0 absolute shadow-lg md:font-[SFNSDisplay-Bold]
+        ${navDark ? 'navtheme-dark' : 'navtheme-light'}
+        border-1 shadow-xl gap-5 text-left flex-col flex text-xl px-5 py-7 top-[100%] right-0 absolute shadow-lg md:font-[SFNSDisplay-Bold]
         md:bg-none md:border-none md:shadow-none md:gap-5 md:flex-row md:flex md:text-lg md:p-0 md:relative md:top-unset md:right-unset font-[SFNSDisplay-Semibold] 
         ${arrow ? 'flex' : 'hidden'}`}>
           <div className='py-1 w-full pl-5 pr-10 md:p-0' onClick={() => scrollToSection('SectionAbout')}>ABOUT</div>
