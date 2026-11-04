@@ -66,7 +66,7 @@ const Navigation = () => {
     <div  ref={navRef} className={
       `
       ${navDark ? 'navtheme-dark' : 'navtheme-light'}
-      md:top-1 md:rounded-xl md:mx-5
+      md:top-2 md:rounded-xl md:mx-5
       z-2 sticky top-0 px-5 py-2 items-center justify-between flex navFade`}>
         <div className='cursor-pointer' onClick={() => scrollHome()}>
           <Logo size={30}></Logo>

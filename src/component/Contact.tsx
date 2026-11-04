@@ -81,7 +81,7 @@ const Contact = () => {
     }
   return (
     <>
-    <div className='grid grid-cols-[max-content_1fr] gap-4 md:gap-6 mt-5 md:mt-3 md:px-30'>
+    <div className='grid grid-cols-[max-content_1fr] gap-4 md:gap-6 mt-5 md:mt-3 md:px-12 lg:px-25'>
         <div className='
         md:h-35 md:w-35 md:border-10
         h-32 w-32 aspect-square border-8 rounded-[10em] overflow-hidden'>
@@ -111,8 +111,8 @@ const Contact = () => {
             <button onClick={() => window.open("https://linkedin.com/in/torres-michael36", "_blank")} className='cursor-pointer w-full border px-2 rounded-xl md:rounded-2xl'>
                 LinkedIn
             </button>
-            <button onClick={() => copyText('email')} className='cursor-pointer w-full border px-2 rounded-xl md:rounded-2xl' disabled={email}>
-                {email ? 'Copied!' : <><span className='md:hidden'>Email</span><span className='hidden md:inline-block'>torres.michael36@gmail.com</span></> }
+            <button onClick={() => copyText('email')} className='truncate cursor-pointer w-full border px-2 rounded-xl md:rounded-2xl' disabled={email}>
+                {email ? 'Copied!' : <><span className='lg:hidden'>Email</span><span className='hidden lg:inline-block'>torres.michael36@gmail.com</span></> }
             </button>
         </div>
         </div>

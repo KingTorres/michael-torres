@@ -46,8 +46,8 @@ const About = () => {
             ${displayedText === fullText && 'animate-[fadeIn_2s_linear_forwards] [animation-delay:2.5s]'}
             opacity-0
             relative md:order-1 gap-2 items-center justify-center flex flex-col text-left p-5`}>
-            <div className='text-xl md:text-3xl font-[SFNSDisplay-Heavy] w-full text-center md:text-left'>ABOUT ME</div>
-            <div className='text-xl md:text-2xl'>
+            <div className='text-xl md:text-2xl lg:text-3xl font-[SFNSDisplay-Heavy] w-full text-center md:text-left'>ABOUT ME</div>
+            <div className='text-xl lg:text-2xl'>
             I'm <span className='font-[SFNSDisplay-Semibold]'>Michael Torres</span>, a Web Designer and Front-end Developer passionate about <span className='font-[SFNSDisplay-Semibold]'>crafting beautiful and functional web application designs</span>.
             <br/><br/>
             Bringing together expertise in Web Design and Graphic-Arts development, I create seamless user experiences, analyze complex problems, and optimize systems through a deep understanding of both fields.
