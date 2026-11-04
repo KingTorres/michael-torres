@@ -41,8 +41,8 @@ export function MultiSeriesRadar() {
 }
 const Talent = () => {
   return (
-    <div className='flex flex-col md:grid md:grid-cols-[max-content_1fr] md:gap-0 md:px-12'>
-        <div className='w-[100vw] h-[90vw] m-auto md:w-[35em] md:h-[25em]'>
+    <div className='flex flex-col md:grid md:grid-cols-[1fr_1fr] md:grid-cols-[50%_1fr] md:gap-0 md:px-12'>
+        <div className='w-[100vw] h-[90vw] m-auto md:w-full md:h-full md:aspect-[1.4/1]'>
             {MultiSeriesRadar()}
         </div>
         <div className='grid grid-cols-[1fr_max-content_1fr] items-center md:pb-5'>
