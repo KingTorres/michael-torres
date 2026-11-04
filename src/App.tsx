@@ -14,11 +14,11 @@ function App() {
         <Navigation></Navigation>
         <div className='md:px-2'>
           <About></About>
-          <section className='sectionFadeIn text-center flex-col flex py-6 px-5 text-[var(--m-bg)] bg-[var(--m-color)] scroll-mt-10 md:scroll-mt-11' id='SectionProjects'>
+          <section data-theme='dark' className='sectionFadeIn text-center flex-col flex py-6 px-5 text-[var(--m-bg)] bg-[var(--m-color)] scroll-mt-10 md:scroll-mt-11' id='SectionProjects'>
             <div className='mb-5 text-xl md:text-3xl font-[SFNSDisplay-Heavy]'>PROJECTS</div>
             <Projects></Projects>
           </section>
-          <section className='sectionFadeIn p-5 pb-8'>
+          <section data-theme='light' className='sectionFadeIn p-5 pb-8'>
             <div className='text-xl md:text-3xl font-[SFNSDisplay-Heavy] w-full text-center mb-2'>EXPERIENCE</div>
             <div className='text-left'>
               My professional journey bridges technical execution with creative vision. With experience leading front-end development, graphic design, and publishing workflows, I combine a strong design sense with a data-driven approach to build intuitive, high-performance web experiences.
@@ -42,7 +42,7 @@ function App() {
               </div>
             </div>
           </section>
-          <section className='sectionFadeIn text-[var(--m-bg)] py-5 md:pb-1 relative md:pb-1 scroll-mt-10 md:scroll-mt-11' id='SectionSkills'>
+          <section data-theme='dark' className='sectionFadeIn text-[var(--m-bg)] py-5 md:pb-1 relative md:pb-1 scroll-mt-10 md:scroll-mt-11' id='SectionSkills'>
             <div className='text-xl md:text-3xl font-[SFNSDisplay-Heavy]'>SKILLS</div>
             <div className='mb-2 mx-[8%] md:mx-20 py-2 mb-5 border-b-1'>Core technical and UI/UX design skills.</div>
             <Talent></Talent>
@@ -51,7 +51,7 @@ function App() {
               <img className='h-full w-full object-cover blur-[0.1em]' src={CoverPhoto} alt="Cover Photo" />
             </div>
           </section>
-          <section className='sectionFadeIn p-5'>
+          <section data-theme='light' className='sectionFadeIn p-5'>
             <div className='text-xl md:text-3xl font-[SFNSDisplay-Heavy] w-full text-center mb-2'>EXPERTISE</div>
             <div className='text-left flex flex-col gap-2 md:grid md:grid-cols-3 md:gap-3'>
               <div><span className='font-[SFNSDisplay-Bold]'>Design Vision</span>: Translating sophisticated design concepts into exceptionally clean, responsive, and high-performance code that bridges the gap between aesthetics and seamless functionality across all modern devices.</div>
@@ -59,13 +59,13 @@ function App() {
               <div><span className='font-[SFNSDisplay-Bold]'>Data Insights</span>: Leveraging analytical thinking and quantitative data to rigorously validate design choices, track user behavior patterns, and continuously improve overall user engagement and retention.</div>
             </div>
           </section>
-          <section className='sectionFadeIn p-5 text-[var(--m-bg)] bg-[var(--m-color)]'>
+          <section data-theme='dark' className='sectionFadeIn p-5 text-[var(--m-bg)] bg-[var(--m-color)]'>
             <div className='
             bg-gradient-to-r from-[#9f9f9f]/80 via-[#dddddd] to-[#454545] bg-clip-text text-transparent
             text-xl md:text-3xl font-[SFNSDisplay-Heavy] w-full text-center mb-2'>CERTIFICATIONS</div>
             <Certification></Certification>
           </section>
-          <section id='SectionContact' className='sectionFadeIn p-5'>
+          <section data-theme='light' id='SectionContact' className='sectionFadeIn p-5'>
             <div className='text-xl md:mt-3 md:text-3xl font-[SFNSDisplay-Heavy] w-full text-center mb-2'>Let's Work Together</div>
             <Contact></Contact>
           </section>

@@ -278,6 +278,15 @@ button {
     border-right-color: var(--border);
   }
 }
+.navtheme-light {
+  color: var(--m-color);
+  background: var(--m-bg);
+}
+
+.navtheme-dark {
+  color: var(--m-bg);
+  background: var(--m-color);
+}
 .navFade {
   opacity: 0;
   animation: fadeIn 0.5s linear forwards;

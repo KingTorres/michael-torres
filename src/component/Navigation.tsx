@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from 'react';
 const Navigation = () => {
   const [arrow , setArrow] = useState(false)
   const navRef = useRef<HTMLDivElement>(null);
+  const [navDark, setNavDark] = useState(false);
   const scrollToSection = (id: string) => {
       setArrow(false)
       const element = document.getElementById(id);
@@ -34,8 +35,38 @@ const Navigation = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [arrow]);
+
+  useEffect(() => {
+  const sections = document.querySelectorAll('section[data-theme]');
+
+  // Define the callback with IntersectionObserverCallback type
+  const handleIntersection: IntersectionObserverCallback = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const sectionTheme = entry.target.getAttribute('data-theme');
+        if (sectionTheme === 'dark') {
+          setNavDark(false);
+        } else if (sectionTheme === 'light') {
+          setNavDark(true);
+        }
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(handleIntersection, {
+    rootMargin: '0px 0px -90% 0px',
+    threshold: 0,
+  });
+
+  sections.forEach((section) => observer.observe(section));
+
+  return () => observer.disconnect();
+}, []);
   return (
-    <div ref={navRef} className='z-2 sticky top-0 bg-[var(--m-bg)] px-5 py-2 items-center justify-between flex navFade'>
+    <div  ref={navRef} className={
+      `
+      ${navDark ? 'navtheme-dark' : 'navtheme-light'}
+      z-2 sticky top-0 bg-[var(--m-bg)] px-5 py-2 items-center justify-between flex navFade`}>
         <div className='cursor-pointer' onClick={() => scrollHome()}>
           <Logo size={30}></Logo>
         </div>
