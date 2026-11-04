@@ -283,6 +283,11 @@ button {
   animation: fadeIn 0.5s linear forwards;
   animation-delay: 5s;
 }
+.sectionFadeIn {
+  opacity: 0;
+  animation: fadeIn 2s linear forwards;
+  animation-delay: 5s;
+}
 .formalStand {
   opacity: 0;
   animation: ZoomIn 0.2s linear forwards;
