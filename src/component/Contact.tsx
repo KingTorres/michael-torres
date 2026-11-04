@@ -3,7 +3,6 @@ import Avatar from '../assets/img/avatar-formal.webp'
 const Contact = () => {
     const [copy, setCopy] = useState(false)
     const [phone, setPhone] = useState(false)
-    const [linkedin, setLinkedin] = useState(false)
     const [email, setEmail] = useState(false)
     const [viber, setViber] = useState(false)
     const [telegram, setTelegram] = useState(false)
@@ -12,7 +11,6 @@ const Contact = () => {
     const resetStates = () => {
         setCopy(false)
         setPhone(false)
-        setLinkedin(false)
         setEmail(false)
         setViber(false)
         setTelegram(false)
@@ -62,10 +60,6 @@ const Contact = () => {
                 setPhone(true)
                 textToCopy = '+639493923708'
                 break;
-            case "linkedin":
-                setLinkedin(true)
-                textToCopy = 'linkedin.com/in/torres-michael36'
-                break;
             case "email":
                 setEmail(true)
                 textToCopy = 'torres.michael36@gmail.com'
@@ -101,7 +95,7 @@ const Contact = () => {
             <div className='
             font-[SFNSDisplay-Bold]'>Michael Torres</div>
             <div className='hidden md:inline-block mx-1'>|</div>
-            <button className='cursor-pointer' onClick={() => copyText('phone')} disabled={linkedin}>
+            <button className='cursor-pointer' onClick={() => copyText('phone')} disabled={phone}>
                 {phone ? 'Copied!' : <u>+639493923708</u>}    
             </button>
         </div>
@@ -114,8 +108,8 @@ const Contact = () => {
             <button onClick={() => copyText('telegram')} className='cursor-pointer w-full border px-2 rounded-xl md:rounded-2xl' disabled={telegram}>
                 {telegram ? 'Copied!' : 'Telegram' }
             </button>
-            <button onClick={() => copyText('linkedin')} className='cursor-pointer w-full border px-2 rounded-xl md:rounded-2xl' disabled={linkedin}>
-                {linkedin ? 'Copied!' : <><span className='md:hidden'>LinkedIn</span><span className='hidden md:inline-block'>linkedin.com/in/torres-michael36</span></> }
+            <button onClick={() => window.open("https://linkedin.com/in/torres-michael36", "_blank")} className='cursor-pointer w-full border px-2 rounded-xl md:rounded-2xl'>
+                LinkedIn
             </button>
             <button onClick={() => copyText('email')} className='cursor-pointer w-full border px-2 rounded-xl md:rounded-2xl' disabled={email}>
                 {email ? 'Copied!' : <><span className='md:hidden'>Email</span><span className='hidden md:inline-block'>torres.michael36@gmail.com</span></> }
