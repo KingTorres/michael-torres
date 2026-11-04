@@ -281,11 +281,13 @@ button {
 .navtheme-light {
   color: var(--m-color);
   background: var(--m-bg);
+  transition: color 0.15s ease-in-out, background 0.15s ease-in-out;
 }
 
 .navtheme-dark {
   color: var(--m-bg);
   background: var(--m-color);
+  transition: color 0.15s ease-in-out, background 0.15s ease-in-out;
 }
 .navFade {
   opacity: 0;
