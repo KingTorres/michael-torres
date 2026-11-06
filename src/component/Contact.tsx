@@ -42,6 +42,9 @@ const Contact = () => {
         } finally {
             setLoading(false)
         }
+        //using Render and Resend in Backend for email
+        //https://dashboard.render.com/
+        //https://resend.com/
     }
 
     // Helper function to reset all active states
