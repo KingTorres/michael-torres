@@ -72,7 +72,7 @@ function App() {
           <section className='p-2 text-[var(--m-bg)] bg-[var(--m-color)] md:mt-8 md:rounded-tl-xl md:rounded-tr-xl'>
             <div className='opacity-50 flex justify-between text-sm px-3'>
               <div>&copy; 2026 Michael Torres.</div>
-              <div>Built in React & Redux</div>
+              <div>Built in React</div>
             </div>
           </section>
         </div>        

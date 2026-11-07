@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Avatar from '../assets/img/avatar-formal.webp'
 const Contact = () => {
     const [copy, setCopy] = useState(false)
-    const [phone, setPhone] = useState(false)
     const [email, setEmail] = useState(false)
     const [viber, setViber] = useState(false)
     const [telegram, setTelegram] = useState(false)
@@ -11,6 +10,14 @@ const Contact = () => {
     const [messageStatusSuccess, setmessageStatusSuccess] = useState(false)
     const [loadingStatus, setLoading] = useState(false)
     const formRef = React.useRef<HTMLFormElement>(null);
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        if (e.target.name === 'email') {
+            setMessage('');
+            setmessageStatusSuccess(false)
+        }
+    };
     const handleSubmit = async (e:React.SubmitEvent<HTMLFormElement>) => {
         e.preventDefault()
         setMessage('')
@@ -19,10 +26,25 @@ const Contact = () => {
         const formData = new FormData(e.currentTarget)
         const name = formData.get('name')?.toString().trim() || 'Visitor Name';
         const email = formData.get('email')?.toString().trim() || 'Visitor Email';
+        const subject = formData.get('subject')?.toString().trim() || 'Visitor Subject';
         const message = formData.get('message')?.toString().trim() || 'Visitor Message';
+        console.log('asd')
+        if (!email.includes('@')) {
+            setMessage('Email must contain @');
+            setmessageStatusSuccess(false)
+            setLoading(false)
+            return;
+        }
+        if (!emailRegex.test(email)) {
+            setMessage('Please enter a valid email address');
+            setmessageStatusSuccess(false)
+            setLoading(false)
+            return;
+        }
         const payload = {
             name,
             email,
+            subject,
             message,
         };
         try {
@@ -128,12 +150,25 @@ const Contact = () => {
         <div>
             <form ref={formRef} onSubmit={handleSubmit}>
                 <div className='flex flex-col gap-4'>
-                    <input disabled={loadingStatus} type="text" name="name" className='text-lg w-full border rounded-lg px-2 capitalize' placeholder='Name' required/>
-                    <input disabled={loadingStatus}  type="text" name="email" className='text-lg w-full border rounded-lg px-2' placeholder='Email' required/>
-                    <textarea disabled={loadingStatus} name="message" className='text-lg min-h-35 max-h-35 border rounded-lg px-2 w-full' placeholder='Message' required/>
+                    <div className='relative text-lg'>
+                        <div className='text-sm bg-[var(--m-bg)] absolute top-[-0.9em] left-1 z-1 px-2 text-[var(--m-color-light)]'>Name</div>
+                        <input maxLength={18} disabled={loadingStatus} type="text" name="name" className='outline-[var(--m-color-light)] relative w-full px-2 py-1 rounded-lg border border-[var(--m-color-light)] capitalize' placeholder='' required/>
+                    </div>
+                    <div className='relative text-lg'>
+                        <div className='text-sm bg-[var(--m-bg)] absolute top-[-0.9em] left-1 z-1 px-2 text-[var(--m-color-light)]'>Email</div>
+                        <input onChange={handleChange} disabled={loadingStatus}  type="text" name="email" className='outline-[var(--m-color-light)] relative w-full px-2 py-1 rounded-lg border border-[var(--m-color-light)]' placeholder='' required/>
+                    </div>
+                    <div className='relative text-lg'>
+                        <div className='text-sm bg-[var(--m-bg)] absolute top-[-0.9em] left-1 z-1 px-2 text-[var(--m-color-light)]'>Subject</div>
+                        <input maxLength={50} disabled={loadingStatus}  type="text" name="subject" className='outline-[var(--m-color-light)] relative w-full px-2 py-1 rounded-lg border border-[var(--m-color-light)]' placeholder='' required/>
+                    </div>
+                    <div className='relative text-lg'>
+                        <div className='text-sm bg-[var(--m-bg)] absolute top-[-0.9em] left-1 z-1 px-2 text-[var(--m-color-light)]'>Message</div>
+                        <textarea disabled={loadingStatus} name="message" className='outline-[var(--m-color-light)] min-h-35 max-h-35 border border-[var(--m-color-light)] rounded-lg px-2 py-1 w-full' placeholder='' required/>
+                    </div>
                 </div>
-                <button type='submit' disabled={loadingStatus} className='border w-full text-xl rounded-4xl mt-4 py-1'>
-                    {loadingStatus ? 'Sending..' : 'Send'}
+                <button type='submit' disabled={loadingStatus} className='border w-full text-xl rounded-4xl mt-1 py-1'>
+                    {loadingStatus ? 'Sending...' : 'Send'}
                 </button>
             </form>
             <div className='font-[SFNSDisplay-Bold]'>{messageStatus ? <div className={messageStatusSuccess ? 'text-[var(--m-success)]' : 'text-[var(--m-failed)]'}>{messageStatus}</div>:<div className='opacity-0'>- Message -</div>}</div>
@@ -143,36 +178,32 @@ const Contact = () => {
         grid grid-cols-[max-content_1fr] gap-4 mt-2
         md:mt-0 md:flex md:flex-col md:items-center md:gap-2 md:px-2'>
             <div className='
-            md:h-36 md:w-36 md:border-10
+            md:h-48 md:w-48 md:border-10 md:mt-3
             h-32 w-32 aspect-square border-8 rounded-[10em] overflow-hidden'>
                 <img className='h-full w-full object-fill' src={Avatar} alt="avatar" />
             </div>
             <div className='
-            md:text-xl md:gap-1 md:w-full md:gap-2.5
-            text-base flex flex-col text-left mt-2 gap-1'>
+            md:text-xl md:gap-1 md:w-full md:gap-3
+            text-xl flex flex-col text-left mt-2 gap-2'>
                 <div className='
                     md:gap-0
-                    md:text-xl md:flex justify-center gap-2 md:items-center'>
+                    md:text-2xl md:flex justify-center gap-2 md:items-center'>
                     <div className='
                     font-[SFNSDisplay-Bold]'>Michael Torres</div>
-                    <div className='hidden md:inline-block mx-1'>|</div>
-                    <button className='cursor-pointer' onClick={() => copyText('phone')} disabled={phone}>
-                        {phone ? 'Copied!' : <u>+639493923708</u>}    
-                    </button>
                 </div>
                 <div className='
-                md:text-xl
-                grid grid-cols-2 text-sm justify-center gap-3'>
-                    <button onClick={() => copyText('viber')} className='cursor-pointer w-full border px-2 rounded-4xl md:py-1' disabled={viber}>
+                md:text-xl md:gap-3 md:gap-x-2
+                grid grid-cols-2 text-sm justify-center gap-2 gap-y-3'>
+                    <button onClick={() => copyText('viber')} className='cursor-pointer w-full border px-2 py-1 rounded-4xl md:py-1' disabled={viber}>
                         {viber ? 'Copied!' : 'Viber' }
                     </button>
-                    <button onClick={() => copyText('telegram')} className='cursor-pointer w-full border px-2 rounded-4xl md:py-1' disabled={telegram}>
+                    <button onClick={() => copyText('telegram')} className='cursor-pointer w-full border px-2 py-1 rounded-4xl md:py-1' disabled={telegram}>
                         {telegram ? 'Copied!' : 'Telegram' }
                     </button>
-                    <button onClick={() => window.open("https://linkedin.com/in/torres-michael36", "_blank")} className='cursor-pointer w-full border px-2 md:py-1 rounded-4xl'>
+                    <button onClick={() => window.open("https://linkedin.com/in/torres-michael36", "_blank")} className='cursor-pointer w-full border py-1 px-2 md:py-1 rounded-4xl'>
                         LinkedIn
                     </button>
-                    <button onClick={() => copyText('email')} className='truncate cursor-pointer w-full border px-2 rounded-4xl md:py-1' disabled={email}>
+                    <button onClick={() => copyText('email')} className='truncate cursor-pointer w-full border py-1 px-2 rounded-4xl md:py-1' disabled={email}>
                         {email ? 'Copied!' : 'Email' }
                     </button>
                 </div>

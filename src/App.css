@@ -73,6 +73,7 @@
   --m-color: #404040;
   --m-success: #5da039;
   --m-failed: #ff4a4a;
+  --m-color-light: #8d8d8d;
 }
 html, body {
   overscroll-behavior: none;
