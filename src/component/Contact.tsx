@@ -7,7 +7,7 @@ const Contact = () => {
     const [telegram, setTelegram] = useState(false)
     // Mailer
     const [messageStatus, setMessage] = useState('')
-    const [messageStatusSuccess, setmessageStatusSuccess] = useState(false)
+    const [messageStatusSuccess, setMessageStatusSuccess] = useState(false)
     const [loadingStatus, setLoading] = useState(false)
     const formRef = React.useRef<HTMLFormElement>(null);
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -15,29 +15,28 @@ const Contact = () => {
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         if (e.target.name === 'email') {
             setMessage('');
-            setmessageStatusSuccess(false)
+            setMessageStatusSuccess(false)
         }
     };
     const handleSubmit = async (e:React.SubmitEvent<HTMLFormElement>) => {
         e.preventDefault()
         setMessage('')
         setLoading(true)
-        setmessageStatusSuccess(false)
+        setMessageStatusSuccess(false)
         const formData = new FormData(e.currentTarget)
         const name = formData.get('name')?.toString().trim() || 'Visitor Name';
         const email = formData.get('email')?.toString().trim() || 'Visitor Email';
         const subject = formData.get('subject')?.toString().trim() || 'Visitor Subject';
         const message = formData.get('message')?.toString().trim() || 'Visitor Message';
-        console.log('asd')
         if (!email.includes('@')) {
             setMessage('Email must contain @');
-            setmessageStatusSuccess(false)
+            setMessageStatusSuccess(false)
             setLoading(false)
             return;
         }
         if (!emailRegex.test(email)) {
             setMessage('Please enter a valid email address');
-            setmessageStatusSuccess(false)
+            setMessageStatusSuccess(false)
             setLoading(false)
             return;
         }
@@ -56,16 +55,17 @@ const Contact = () => {
             const data = await res.json()
             if(data.success) {
                 setMessage("Message sent successfully!")
-                setmessageStatusSuccess(true)
+                setMessageStatusSuccess(true)
                 formRef.current?.reset();
             } else {
                 setMessage("Failed to send message")
-                setmessageStatusSuccess(false)
+                setMessageStatusSuccess(false)
             }
         } catch(err) {
-            console.error('Error', err)
-            setMessage("Something went wrong.")
-            setmessageStatusSuccess(false)
+            if(err instanceof Error) {
+                setMessage(`Failed: ${err.message}`);
+            }
+            setMessageStatusSuccess(false)
         } finally {
             setLoading(false)
         }
