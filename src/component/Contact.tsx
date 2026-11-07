@@ -77,7 +77,6 @@ const Contact = () => {
     // Helper function to reset all active states
     const resetStates = () => {
         setCopy(false)
-        setPhone(false)
         setEmail(false)
         setViber(false)
         setTelegram(false)
@@ -121,10 +120,6 @@ const Contact = () => {
         let textToCopy = ''
 
         switch (value) {
-            case "phone":
-                setPhone(true)
-                textToCopy = '+639493923708'
-                break;
             case "email":
                 setEmail(true)
                 textToCopy = 'torres.michael36@gmail.com'
