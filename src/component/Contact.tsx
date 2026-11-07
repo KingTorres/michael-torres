@@ -8,11 +8,14 @@ const Contact = () => {
     const [telegram, setTelegram] = useState(false)
     // Mailer
     const [messageStatus, setMessage] = useState('')
+    const [messageStatusSuccess, setmessageStatusSuccess] = useState(false)
     const [loadingStatus, setLoading] = useState(false)
     const formRef = React.useRef<HTMLFormElement>(null);
     const handleSubmit = async (e:React.SubmitEvent<HTMLFormElement>) => {
         e.preventDefault()
+        setMessage('')
         setLoading(true)
+        setmessageStatusSuccess(false)
         const formData = new FormData(e.currentTarget)
         const name = formData.get('name')?.toString().trim() || 'Visitor Name';
         const email = formData.get('email')?.toString().trim() || 'Visitor Email';
@@ -22,7 +25,6 @@ const Contact = () => {
             email,
             message,
         };
-        setMessage('')
         try {
             const res = await fetch('https://portfolio-backend-6tec.onrender.com/api/contact', {
                 method: 'POST',
@@ -32,13 +34,16 @@ const Contact = () => {
             const data = await res.json()
             if(data.success) {
                 setMessage("Message sent successfully!")
+                setmessageStatusSuccess(true)
                 formRef.current?.reset();
             } else {
                 setMessage("Failed to send message")
+                setmessageStatusSuccess(false)
             }
         } catch(err) {
             console.error('Error', err)
             setMessage("Something went wrong.")
+            setmessageStatusSuccess(false)
         } finally {
             setLoading(false)
         }
@@ -123,15 +128,15 @@ const Contact = () => {
         <div>
             <form ref={formRef} onSubmit={handleSubmit}>
                 <div className='flex flex-col gap-4'>
-                    <input type="text" name="name" className='text-lg w-full border rounded-lg px-2 capitalize' placeholder='Name' required/>
-                    <input type="text" name="email" className='text-lg w-full border rounded-lg px-2' placeholder='Email' required/>
-                    <textarea name="message" className='text-lg min-h-35 max-h-35 border rounded-lg px-2 w-full' placeholder='Message' required/>
+                    <input disabled={loadingStatus} type="text" name="name" className='text-lg w-full border rounded-lg px-2 capitalize' placeholder='Name' required/>
+                    <input disabled={loadingStatus}  type="text" name="email" className='text-lg w-full border rounded-lg px-2' placeholder='Email' required/>
+                    <textarea disabled={loadingStatus} name="message" className='text-lg min-h-35 max-h-35 border rounded-lg px-2 w-full' placeholder='Message' required/>
                 </div>
                 <button type='submit' disabled={loadingStatus} className='border w-full text-xl rounded-4xl mt-4 py-1'>
                     {loadingStatus ? 'Sending..' : 'Send'}
                 </button>
             </form>
-            <div>{messageStatus ? <div>{messageStatus}</div>:<div className='opacity-0'>- Message -</div>}</div>
+            <div className='font-[SFNSDisplay-Bold]'>{messageStatus ? <div className={messageStatusSuccess ? 'text-[var(--m-success)]' : 'text-[var(--m-failed)]'}>{messageStatus}</div>:<div className='opacity-0'>- Message -</div>}</div>
         </div>
         <div className='
         lg:px-25
