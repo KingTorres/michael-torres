@@ -24,7 +24,7 @@ const ProfileStand = () => {
             animate-[fadeSlideRight_1.5s_linear_forwards] [animation-delay:3.4s]
             opacity-0
             whitespace-nowrap text-right flex-col flex
-            bg-gradient-to-r from-[#101010] to-[#d5d5d5] bg-clip-text text-transparent
+            bg-gradient-to-r from-[#454545] to-[#cccccc] bg-clip-text text-transparent
             top-[28vw] md:text-left left-[2.1vw] absolute text-[6.5vw]
             md:from-[#dbdbdb] md:to-[#454545]
             md:top-[3em] md:left-[-2em] md:text-[1.4em]
@@ -44,7 +44,7 @@ const ProfileStand = () => {
             animate-[fadeSlideRight_1.5s_linear_forwards] [animation-delay:3.8s]
             opacity-0
             whitespace-nowrap absolute flex
-            bg-gradient-to-r from-[#101010] to-[#d5d5d5] bg-clip-text text-transparent
+            bg-gradient-to-r from-[#454545] to-[#cccccc] bg-clip-text text-transparent
             top-[60vw] left-[8vw] text-[6.5vw] 
             md:from-[#dbdbdb] via-[#9f9f9f] md:to-[#454545]
             md:top-[8.8em] md:left-[-2.3em] md:text-[1.4em]

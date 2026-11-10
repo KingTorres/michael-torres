@@ -61,7 +61,7 @@ function App() {
           </section>
           <section data-theme='dark' className='sectionFadeIn p-5 text-[var(--m-bg)] bg-[var(--m-color)]'>
             <div className='
-            bg-gradient-to-r from-[#9f9f9f]/80 via-[#dddddd] to-[#454545] bg-clip-text text-transparent
+            bg-gradient-to-r from-[#9f9f9f]/80 via-[#cccccc] to-[#454545] bg-clip-text text-transparent
             text-xl md:text-3xl font-[SFNSDisplay-Heavy] w-full text-center mb-2'>CERTIFICATIONS</div>
             <Certification></Certification>
           </section>
