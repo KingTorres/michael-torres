@@ -69,7 +69,7 @@ function App() {
             <div className='text-xl md:mt-3 md:text-3xl font-[SFNSDisplay-Heavy] w-full text-center mb-2'>Let's Work Together</div>
             <Contact></Contact>
           </section>
-          <section className='p-2 text-[var(--m-bg)] bg-[var(--m-color)] md:mt-8 md:rounded-tl-xl md:rounded-tr-xl'>
+          <section className='p-2 text-[var(--m-bg)] bg-[var(--m-color)] md:rounded-tl-xl md:rounded-tr-xl'>
             <div className='opacity-50 flex justify-between text-sm px-3'>
               <div>&copy; 2026 Michael Torres.</div>
               <div>Built in React</div>

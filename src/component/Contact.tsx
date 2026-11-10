@@ -144,22 +144,22 @@ const Contact = () => {
     <div className='md:grid grid-cols-2 md:gap-3 mt-5 md:mt-6'>
         <div>
             <form ref={formRef} onSubmit={handleSubmit}>
-                <div className='flex flex-col gap-4'>
+                <div className='flex flex-col gap-5'>
                     <div className='relative text-lg'>
                         <div className='text-sm bg-[var(--m-bg)] absolute top-[-0.9em] left-1 z-1 px-2 text-[var(--m-color-light)]'>Name</div>
-                        <input maxLength={18} disabled={loadingStatus} type="text" name="name" className='outline-[var(--m-color-light)] relative w-full px-2 py-1 rounded-lg border border-[var(--m-color-light)] capitalize' placeholder='' required/>
+                        <input maxLength={18} disabled={loadingStatus} type="text" name="name" className='outline-[var(--m-color-light)] relative w-full px-3 py-2 rounded-lg border border-[var(--m-color-light)] capitalize' placeholder='' required/>
                     </div>
                     <div className='relative text-lg'>
                         <div className='text-sm bg-[var(--m-bg)] absolute top-[-0.9em] left-1 z-1 px-2 text-[var(--m-color-light)]'>Email</div>
-                        <input onChange={handleChange} disabled={loadingStatus}  type="text" name="email" className='outline-[var(--m-color-light)] relative w-full px-2 py-1 rounded-lg border border-[var(--m-color-light)]' placeholder='' required/>
+                        <input onChange={handleChange} disabled={loadingStatus}  type="text" name="email" className='outline-[var(--m-color-light)] relative w-full px-3 py-2 rounded-lg border border-[var(--m-color-light)]' placeholder='' required/>
                     </div>
                     <div className='relative text-lg'>
                         <div className='text-sm bg-[var(--m-bg)] absolute top-[-0.9em] left-1 z-1 px-2 text-[var(--m-color-light)]'>Subject</div>
-                        <input maxLength={50} disabled={loadingStatus}  type="text" name="subject" className='outline-[var(--m-color-light)] relative w-full px-2 py-1 rounded-lg border border-[var(--m-color-light)]' placeholder='' required/>
+                        <input maxLength={50} disabled={loadingStatus}  type="text" name="subject" className='outline-[var(--m-color-light)] relative w-full px-3 py-2 rounded-lg border border-[var(--m-color-light)]' placeholder='' required/>
                     </div>
                     <div className='relative text-lg'>
                         <div className='text-sm bg-[var(--m-bg)] absolute top-[-0.9em] left-1 z-1 px-2 text-[var(--m-color-light)]'>Message</div>
-                        <textarea disabled={loadingStatus} name="message" className='outline-[var(--m-color-light)] min-h-35 max-h-35 border border-[var(--m-color-light)] rounded-lg px-2 py-1 w-full' placeholder='' required/>
+                        <textarea disabled={loadingStatus} name="message" className='outline-[var(--m-color-light)] min-h-35 max-h-35 md:min-h-29 md:max-h-29 border border-[var(--m-color-light)] rounded-lg px-3 py-2 w-full' placeholder='' required/>
                     </div>
                 </div>
                 <button type='submit' disabled={loadingStatus} className='border w-full text-xl rounded-4xl mt-1 py-1'>
@@ -171,14 +171,14 @@ const Contact = () => {
         <div className='
         lg:px-25
         grid grid-cols-[max-content_1fr] gap-4 mt-2
-        md:mt-0 md:flex md:flex-col md:items-center md:gap-2 md:px-2'>
+        md:flex md:flex-col md:items-center md:gap-2 md:px-2'>
             <div className='
             md:h-48 md:w-48 md:border-10 md:mt-3
             h-32 w-32 aspect-square border-8 rounded-[10em] overflow-hidden'>
                 <img className='h-full w-full object-fill' src={Avatar} alt="avatar" />
             </div>
             <div className='
-            md:text-xl md:gap-1 md:w-full md:gap-3
+            md:text-xl md:gap-1 md:w-full md:gap-4
             text-xl flex flex-col text-left mt-2 gap-2'>
                 <div className='
                     md:gap-0
